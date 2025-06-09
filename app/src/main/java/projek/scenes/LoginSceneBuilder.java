@@ -17,7 +17,6 @@ import projek.model.User;
 
 public class LoginSceneBuilder {
 
-    // Your Color Palette
     private static final String COLOR_BACKGROUND = "#F8F3D9";
     private static final String COLOR_LIGHT_ACCENT = "#EBE5C2";
     private static final String COLOR_MID_TONE = "#B9B28A";
@@ -27,7 +26,6 @@ public class LoginSceneBuilder {
     private static final String COLOR_ERROR = "#B85450";
 
     public static Scene createLoginScene(Stage primaryStage, App mainApp) {
-        // Main container with gradient background
         StackPane root = new StackPane();
         primaryStage.centerOnScreen();
         root.setStyle(
@@ -75,9 +73,7 @@ public class LoginSceneBuilder {
             DataStore.getInstance().saveAllDataToFiles(); // Panggil metode penyimpanan
             System.out.println("Data saved successfully.");
 
-        
         });
-        // -------------------------------------------------------------
 
         return scene;
     }
@@ -88,7 +84,7 @@ public class LoginSceneBuilder {
         header.setPadding(new Insets(40, 30, 30, 30));
 
         // Back arrow (decorative)
-        Label backArrow = new Label("←");
+        Label backArrow = new Label("");
         backArrow.setStyle(
             "-fx-text-fill: white; " +
             "-fx-font-size: 24px; " +
@@ -100,10 +96,10 @@ public class LoginSceneBuilder {
         backContainer.getChildren().add(backArrow);
 
         // Title
-        Label titleLabel = new Label("Sign In");
+        Label titleLabel = new Label("Welcome to the Hotel!");
         titleLabel.setStyle(
             "-fx-text-fill: white; " +
-            "-fx-font-size: 28px; " +
+            "-fx-font-size: 26px; " +
             "-fx-font-weight: bold;"
         );
 
