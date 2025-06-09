@@ -7,7 +7,7 @@ public class Guest extends User {
 
     @Override
     public String getRole() {
-        return "guest";
+        return "Guest";
     }
 }
 
