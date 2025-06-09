@@ -83,18 +83,6 @@ public class LoginSceneBuilder {
         header.setAlignment(Pos.CENTER);
         header.setPadding(new Insets(40, 30, 30, 30));
 
-        // Back arrow (decorative)
-        Label backArrow = new Label("");
-        backArrow.setStyle(
-            "-fx-text-fill: white; " +
-            "-fx-font-size: 24px; " +
-            "-fx-font-weight: bold;"
-        );
-
-        HBox backContainer = new HBox();
-        backContainer.setAlignment(Pos.CENTER_LEFT);
-        backContainer.getChildren().add(backArrow);
-
         // Title
         Label titleLabel = new Label("Welcome to the Hotel!");
         titleLabel.setStyle(
@@ -103,7 +91,7 @@ public class LoginSceneBuilder {
             "-fx-font-weight: bold;"
         );
 
-        header.getChildren().addAll(backContainer, titleLabel);
+        header.getChildren().addAll(titleLabel);
         return header;
     }
 
