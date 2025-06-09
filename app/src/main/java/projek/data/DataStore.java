@@ -270,6 +270,27 @@ public class DataStore {
         }
     }
 
+    public boolean deleteReservation(String reservationId) {
+        Reservasi target = null;
+        for (Reservasi r : reservationList) {
+            if (r.getIdReservasi().equals(reservationId)) {
+                target = r;
+                break;
+            }
+        }
+
+        if (target != null) {
+            reservationList.remove(target);
+            saveReservationsToFile();  
+            System.out.println("Reservation " + reservationId + " deleted successfully.");
+            return true;
+        } else {
+            System.out.println("Reservation " + reservationId + " not found.");
+            return false;
+        }
+    }
+
+
     private static class ReservationDataForSerialization {
         String idReservasi;
         String tamuUsername;
