@@ -231,10 +231,10 @@ public class AdminSceneBuilder {
         Button refreshButton = new Button("Refresh Data");
         styleButton(refreshButton, false);
         
-        Button exportButton = new Button("Export Report");
-        styleButton(exportButton, false);
+        Button deleteButton = new Button("Delete Data");
+        styleDeleteButton(deleteButton);
 
-        HBox buttonSection = new HBox(15, refreshButton, exportButton);
+        HBox buttonSection = new HBox(15, refreshButton, deleteButton);
         buttonSection.setAlignment(Pos.CENTER_RIGHT);
         
         return buttonSection;
@@ -243,6 +243,41 @@ public class AdminSceneBuilder {
     private static void styleButton(Button button, boolean isSecondary) {
         String backgroundColor = isSecondary ? COLOR_SECONDARY : COLOR_ACCENT;
         String hoverColor = isSecondary ? "#6B5B47" : "#B8941F";
+        
+        button.setPrefHeight(40);
+        button.setPrefWidth(140);
+        button.setStyle(
+            "-fx-background-color: " + backgroundColor + ";" +
+            "-fx-text-fill: " + COLOR_TEXT_LIGHT + ";" +
+            "-fx-font-weight: bold;" +
+            "-fx-font-size: 14px;" +
+            "-fx-background-radius: 20px;" +
+            "-fx-border-radius: 20px;"
+        );
+
+        button.setOnMouseEntered(e -> button.setStyle(
+            "-fx-background-color: " + hoverColor + ";" +
+            "-fx-text-fill: " + COLOR_TEXT_LIGHT + ";" +
+            "-fx-font-weight: bold;" +
+            "-fx-font-size: 14px;" +
+            "-fx-background-radius: 20px;" +
+            "-fx-border-radius: 20px;" +
+            "-fx-cursor: hand;"
+        ));
+
+        button.setOnMouseExited(e -> button.setStyle(
+            "-fx-background-color: " + backgroundColor + ";" +
+            "-fx-text-fill: " + COLOR_TEXT_LIGHT + ";" +
+            "-fx-font-weight: bold;" +
+            "-fx-font-size: 14px;" +
+            "-fx-background-radius: 20px;" +
+            "-fx-border-radius: 20px;"
+        ));
+    }
+
+    private static void styleDeleteButton(Button button) {
+        String backgroundColor = "#DC3545"; // Red color for delete
+        String hoverColor = "#C82333";
         
         button.setPrefHeight(40);
         button.setPrefWidth(140);
@@ -287,7 +322,7 @@ public class AdminSceneBuilder {
         
         // Get buttons from buttonSection
         Button refreshButton = (Button) buttonSection.getChildren().get(0);
-        Button exportButton = (Button) buttonSection.getChildren().get(1);
+        Button deleteButton = (Button) buttonSection.getChildren().get(1);
 
         ObservableList<Reservasi> masterReservasiList = FXCollections.observableArrayList();
         
@@ -328,13 +363,80 @@ public class AdminSceneBuilder {
             System.out.println("Reservation data refreshed.");
         });
 
-        exportButton.setOnAction(e -> {
-            // Placeholder for export functionality
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Export Report");
-            alert.setHeaderText(null);
-            alert.setContentText("Export functionality will be implemented soon!");
-            alert.showAndWait();
+        deleteButton.setOnAction(e -> {
+            Reservasi selectedReservasi = table.getSelectionModel().getSelectedItem();
+            
+            if (selectedReservasi == null) {
+                // No data selected
+                Alert warningAlert = new Alert(Alert.AlertType.WARNING);
+                warningAlert.setTitle("No Selection");
+                warningAlert.setHeaderText("No Reservation Selected");
+                warningAlert.setContentText("Please select a reservation from the table to delete.");
+                warningAlert.showAndWait();
+                return;
+            }
+            
+            // Confirmation before delete
+            Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+            confirmAlert.setTitle("Delete Confirmation");
+            confirmAlert.setHeaderText("Delete Reservation");
+            confirmAlert.setContentText(
+                "Are you sure you want to delete this reservation?\n\n" +
+                "Reservation ID: " + selectedReservasi.getIdReservasi() + "\n" +
+                "Guest: " + (selectedReservasi.getTamu() != null ? 
+                            selectedReservasi.getTamu().getUsername() : "N/A") + "\n" +
+                "Room: " + (selectedReservasi.getKamar() != null ? 
+                           selectedReservasi.getKamar().getNomor() : "N/A") + "\n\n" +
+                "This action cannot be undone!"
+            );
+            
+            ButtonType deleteButtonType = new ButtonType("Delete", ButtonBar.ButtonData.OK_DONE);
+            ButtonType cancelButtonType = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+            confirmAlert.getButtonTypes().setAll(deleteButtonType, cancelButtonType);
+            
+            // Style the delete button in alert to be red
+            confirmAlert.getDialogPane().lookupButton(deleteButtonType).setStyle(
+                "-fx-background-color: #DC3545; -fx-text-fill: white; -fx-font-weight: bold;"
+            );
+            
+            confirmAlert.showAndWait().ifPresent(response -> {
+                if (response == deleteButtonType) {
+                    try {
+                        // Delete from DataStore
+                        boolean deleteSuccess = DataStore.getInstance().deleteReservation(selectedReservasi.getIdReservasi());
+                        
+                        if (deleteSuccess) {
+                            // Refresh table after successful deletion
+                            loadAndRefreshTable.run();
+                            
+                            // Show success message
+                            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+                            successAlert.setTitle("Delete Successful");
+                            successAlert.setHeaderText("Reservation Deleted");
+                            successAlert.setContentText("The reservation has been successfully deleted from the system.");
+                            successAlert.showAndWait();
+                            
+                            System.out.println("Reservation deleted: " + selectedReservasi.getIdReservasi());
+                        } else {
+                            // Show error message if delete failed
+                            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                            errorAlert.setTitle("Delete Failed");
+                            errorAlert.setHeaderText("Unable to Delete Reservation");
+                            errorAlert.setContentText("An error occurred while trying to delete the reservation. Please try again.");
+                            errorAlert.showAndWait();
+                        }
+                    } catch (Exception ex) {
+                        // Handle exception
+                        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                        errorAlert.setTitle("Delete Error");
+                        errorAlert.setHeaderText("System Error");
+                        errorAlert.setContentText("An unexpected error occurred: " + ex.getMessage());
+                        errorAlert.showAndWait();
+                        
+                        ex.printStackTrace();
+                    }
+                }
+            });
         });
     }
 }
