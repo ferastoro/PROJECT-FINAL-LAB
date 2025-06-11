@@ -1,4 +1,3 @@
-```
 # 🏨**HOTEL MANAGEMENT SYSTEM**
 
 Aplikasi perhotelan ini adalah sistem manajemen hotel yang dirancang untuk memudahkan pengelolaan reservasi kamar hotel. 
@@ -90,5 +89,5 @@ Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
    Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
 - Abstraction:
    Kelas abstack mendefinisikan kerangka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
-```
+
 
