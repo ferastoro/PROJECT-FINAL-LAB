@@ -7,7 +7,7 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 2. Admin: Admin dapat mengelola data pengguna, kamar, dan reservasi, serta memantau status kamar yang masih tersedia.
 3. Reservasi: Pengguna dapat melihat kamar yang tersedia, melakukan reservasi, danmenghitung total biaya berdasarkan jumlah hari yang diinginkan.
 
- ##**CARA KERJA**
+ ## **CARA KERJA**
 
 Aplikasi ini dibangun menggunakan Java dan JavaFX untuk antarmuka pengguna. Berikut cara kerja aplikasi ini:
 - Login: Pengguna dapat masuk ke dalam aplikasi menggunakan username dan password. Terdapat dua jenis pengguna, yaitu Admin dan Tamu.
@@ -67,26 +67,26 @@ Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna,
 
 projek/model/
 Berisi kelas model data abstrack dan konkrit:
-1. 'User.java' (abstract) dengan subclass 'Admin.java' dan 'Guest.java'
-2. 'Kamar.java' (abstract) dengan subclass 'KamarStandard.java' dan KamarDeluxe.java'
-3. 'Reservasi.java' untuk data reservasi hotel
+- 'User.java' (abstract) dengan subclass 'Admin.java' dan 'Guest.java'
+- 'Kamar.java' (abstract) dengan subclass 'KamarStandard.java' dan KamarDeluxe.java'
+- 'Reservasi.java' untuk data reservasi hotel
 
 projek/scenes/
-1. 'LoginSceneBuilder.java' untuk halaman login dan pendaftaran
-2. 'GuestScenesBuilder.java' untuk dashboard pelanggan
-3. 'AdminScenesBuilder.java' untuk dashboard admin
+- 'LoginSceneBuilder.java' untuk halaman login dan pendaftaran
+- 'GuestScenesBuilder.java' untuk dashboard pelanggan
+- 'AdminScenesBuilder.java' untuk dashboard admin
 
 projek/App.java
 Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 ## **PENERAPAN PILAR OOP**
-1. Encapsulation:
+- Encapsulation:
    Data dan fungsional dikemas dalam kelas dengan variabel private atau protected, diakses lewat getter dan setter untuk menjaga keamanan dan integritas data.
-2. Inheritance:
+- Inheritance:
    Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal ini memudahkan pewarisan.
-3. Polymorphism:
+- Polymorphism:
    Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
-4. Abstraction:
+- Abstraction:
    Kelas abstack mendefinisikan keranngka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
 
 
