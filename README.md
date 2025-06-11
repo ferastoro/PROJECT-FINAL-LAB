@@ -103,7 +103,7 @@ Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 - Inheritance:
 
-  Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal
+  Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guest.java', 'KamarStandard.java', dan 'KamarDeluxe.java'. Hal
 
 
   ini memudahkan pewarisan.
