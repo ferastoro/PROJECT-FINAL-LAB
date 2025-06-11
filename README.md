@@ -10,10 +10,10 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
  ##**CARA KERJA**
 
 Aplikasi ini dibangun menggunakan Java dan JavaFX untuk antarmuka pengguna. Berikut cara kerja aplikasi ini:
-1. Login: Pengguna dapat masuk ke dalam aplikasi menggunakan username dan password. Terdapat dua jenis pengguna, yaitu Admin dan Tamu.
-2. Manajemen Kamar: Admin dapat menambah, mengedit, dan menghapus data kamar. Kamar dibedakan menjadi dua tipe, yaitu kamar Standard dan kamar Deluxe, dengan harga dan fasilitas yang berbeda.
-3. Reservasi: Tamu dapat memilih kamar yang tersedia, menentukan tanggal check-in dan check-out, serta menghitung total biaya berdasarkan harga perhari.
-4. Penyimpana Data: Data pengguna, kamar, dan reservasi disimpan dalam formatJSON di dalam folder 'Data'. Aplikasi akan memuat data ini saat dijalankan dan menyimpannya kembali saat aplikasi ditutup.
+- Login: Pengguna dapat masuk ke dalam aplikasi menggunakan username dan password. Terdapat dua jenis pengguna, yaitu Admin dan Tamu.
+- Manajemen Kamar: Admin dapat menambah, mengedit, dan menghapus data kamar. Kamar dibedakan menjadi dua tipe, yaitu kamar Standard dan kamar Deluxe, dengan harga dan fasilitas yang berbeda.
+- Reservasi: Tamu dapat memilih kamar yang tersedia, menentukan tanggal check-in dan check-out, serta menghitung total biaya berdasarkan harga perhari.
+- Penyimpana Data: Data pengguna, kamar, dan reservasi disimpan dalam formatJSON di dalam folder 'Data'. Aplikasi akan memuat data ini saat dijalankan dan menyimpannya kembali saat aplikasi ditutup.
 
 ## **CARA MENJALANKAN APLIKASI**
 
