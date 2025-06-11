@@ -280,16 +280,22 @@ public class DataStore {
         }
 
         if (target != null) {
+            Kamar roomToFree = target.getKamar();
             reservationList.remove(target);
-            saveReservationsToFile();  
+            saveReservationsToFile();
+            
+            if (roomToFree != null) {
+                updateRoomAvailability(roomToFree.getNomor(), true);
+                System.out.println("Room " + roomToFree.getNomor() + " is now available again.");
+            }
             System.out.println("Reservation " + reservationId + " deleted successfully.");
             return true;
+
         } else {
             System.out.println("Reservation " + reservationId + " not found.");
             return false;
         }
     }
-
 
     private static class ReservationDataForSerialization {
         String idReservasi;
