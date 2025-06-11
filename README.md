@@ -11,6 +11,7 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 
 3. Reservasi: Pengguna dapat melihat kamar yang tersedia, melakukan reservasi, danmenghitung total biaya berdasarkan jumlah hari yang diinginkan.
 
+
 ## **CARA MENJALANKAN APLIKASI**
 
 
@@ -36,34 +37,35 @@ FINALAB_TEST/
 ├── .gradle/
 ├── .vscode/
 ├── app/
-├── build/
-├── data/
-│   ├── kamar.json
-│   ├── reservasi.json
-│   └── users.json
-├── resources/
-│   └── image/
-│       ├── kamardeluxe.jpg
-│       └── kamarstandard.jpg
-└── src/
-    └── main/
-        └── java/
-            └── projek/
-                ├── data/
-                │   └── DataStore.java
-                ├── model/
-                │   ├── Admin.java
-                │   ├── Guest.java
-                │   ├── Kamar.java
-                │   ├── KamarDeluxe.java
-                │   ├── KamarStandard.java
-                │   ├── Reservasi.java
-                │   └── User.java
-                └── scenes/
-                    ├── AdminSceneBuilder.java
-                    ├── GuestSceneBuilder.java
-                    ├── LoginSceneBuilder.java
-                    └── App.java
+│   ├── build/
+│   ├── data/
+│   │   ├── kamar.json
+│   │   ├── reservasi.json
+│   │   └── users.json
+│   └── src/
+│       └── main/
+│           └── java/
+│               └── projek/
+│                   ├── data/
+│                   │   └── DataStore.java
+│                   ├── model/
+│                   │   ├── Admin.java
+│                   │   ├── Guest.java
+│                   │   ├── Kamar.java
+│                   │   ├── KamarDeluxe.java
+│                   │   ├── KamarStandard.java
+│                   │   ├── Reservasi.java
+│                   │   └── User.java
+│                   ├── scenes/
+│                   │   ├── AdminSceneBuilder.java
+│                   │   ├── GuestSceneBuilder.java
+│                   │   └── LoginSceneBuilder.java
+│                   └── App.java
+│           └── resources/
+│               └── image/
+│                   ├── kamardeluxe.jpg
+│                   └── kamarstandard.jpg
+└── build.gradle
 ```
 
 
