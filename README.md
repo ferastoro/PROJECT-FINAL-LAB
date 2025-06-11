@@ -89,15 +89,19 @@ Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 ## **PENERAPAN PILAR OOP**
 
 - Encapsulation:
-   Data dan fungsional dikemas dalam kelas dengan variabel private atau protected, diakses lewat getter dan setter untuk menjaga keamanan dan integritas data.
+
+  Data dan fungsional dikemas dalam kelas dengan variabel private atau protected, diakses lewat getter dan setter untuk menjaga keamanan dan integritas data.
 
 - Inheritance:
-   Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal ini memudahkan pewarisan.
+
+  Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal ini memudahkan pewarisan.
 
 - Polymorphism:
-   Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
+
+  Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
 
 - Abstraction:
-   Kelas abstack mendefinisikan kerangka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
+
+  Kelas abstack mendefinisikan kerangka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
 
 
