@@ -25,6 +25,7 @@ Aplikasi ini dibangun menggunakan Java dan JavaFX untuk antarmuka pengguna. Beri
 
 
 **STRUKTUR FOLDER**
+'''
 FINALAB_TEST/
 ├── .gradle/
 ├── .vscode/
@@ -57,6 +58,7 @@ FINALAB_TEST/
                     ├── GuestSceneBuilder.java
                     ├── LoginSceneBuilder.java
                     └── App.java
+'''
 
 projek/data/
 Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
