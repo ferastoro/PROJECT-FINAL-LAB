@@ -1,5 +1,6 @@
 # 🏨**HOTEL MANAGEMENT SYSTEM**
 
+
 Aplikasi perhotelan ini adalah sistem manajemen hotel yang dirancang untuk memudahkan pengelolaan reservasi kamar hotel. 
 
 Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
@@ -11,6 +12,7 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 3. Reservasi: Pengguna dapat melihat kamar yang tersedia, melakukan reservasi, danmenghitung total biaya berdasarkan jumlah hari yang diinginkan.
 
 ## **CARA MENJALANKAN APLIKASI**
+
 
 - Pastikan perangkat telah terpasang Java Development Kit(JDK) 8 atau lebih baru dan JavaFX SDK.
 
@@ -28,6 +30,7 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 
 
 ## **STRUKTUR FOLDER**
+
 ```
 FINALAB_TEST/
 ├── .gradle/
@@ -63,6 +66,7 @@ FINALAB_TEST/
                     └── App.java
 ```
 
+
 projek/data/
 
 Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
@@ -89,7 +93,9 @@ projek/App.java
 
 Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
+
 ## **PENERAPAN PILAR OOP**
+
 
 - Encapsulation:
 
@@ -99,11 +105,13 @@ Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
   Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal
 
+
   ini memudahkan pewarisan.
 
 - Polymorphism:
 
   Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat
+
 
   referensi kelas dasar.
 
