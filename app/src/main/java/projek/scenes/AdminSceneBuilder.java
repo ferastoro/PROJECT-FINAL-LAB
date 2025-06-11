@@ -183,7 +183,7 @@ public class AdminSceneBuilder {
         TableColumn<Reservasi, String> guestCol = new TableColumn<>("Guest Name");
         guestCol.setCellValueFactory(cellData ->
             cellData.getValue().getTamu() != null ?
-            new SimpleStringProperty(cellData.getValue().getTamu().getUsername()) :
+            new SimpleStringProperty(cellData.getValue().getTamu().getFullName()) :
             new SimpleStringProperty("N/A"));
         guestCol.setPrefWidth(150);
 
@@ -344,7 +344,7 @@ public class AdminSceneBuilder {
                 boolean idMatch = reservasi.getIdReservasi() != null && 
                     reservasi.getIdReservasi().toLowerCase().contains(lowerCaseFilter);
                 boolean tamuMatch = reservasi.getTamu() != null && 
-                    reservasi.getTamu().getUsername().toLowerCase().contains(lowerCaseFilter);
+                    reservasi.getTamu().getFullName().toLowerCase().contains(lowerCaseFilter);
                 boolean kamarMatch = reservasi.getKamar() != null && 
                     reservasi.getKamar().getNomor().toLowerCase().contains(lowerCaseFilter);
                 
@@ -384,7 +384,7 @@ public class AdminSceneBuilder {
                 "Are you sure you want to delete this reservation?\n\n" +
                 "Reservation ID: " + selectedReservasi.getIdReservasi() + "\n" +
                 "Guest: " + (selectedReservasi.getTamu() != null ? 
-                            selectedReservasi.getTamu().getUsername() : "N/A") + "\n" +
+                            selectedReservasi.getTamu().getFullName() : "N/A") + "\n" +
                 "Room: " + (selectedReservasi.getKamar() != null ? 
                            selectedReservasi.getKamar().getNomor() : "N/A") + "\n\n" +
                 "This action cannot be undone!"
