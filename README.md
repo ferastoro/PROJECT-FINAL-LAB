@@ -25,40 +25,38 @@ Aplikasi ini dibangun menggunakan Java dan JavaFX untuk antarmuka pengguna. Beri
 
 
 **STRUKTUR FOLDER**
-
 FINALAB_TEST/
 ├── .gradle/
 ├── .vscode/
 ├── app/
-│   ├── build/
-│   ├── data/
-│   │   ├── kamar.json
-│   │   ├── reservasi.json
-│   │   └── users.json
-│   └── src/
-│       └── main/
-│           └── java/
-│               └── projek/
-│                   ├── data/
-│                   │   └── DataStore.java
-│                   ├── model/
-│                   │   ├── Admin.java
-│                   │   ├── Guest.java
-│                   │   ├── Kamar.java
-│                   │   ├── KamarDeluxe.java
-│                   │   ├── KamarStandard.java
-│                   │   ├── Reservasi.java
-│                   │   └── User.java
-│                   ├── scenes/
-│                   │   ├── AdminSceneBuilder.java
-│                   │   ├── GuestSceneBuilder.java
-│                   │   └── LoginSceneBuilder.java
-│                   └── App.java
-│           └── resources/
-│               └── image/
-│                   ├── kamardeluxe.jpg
-│                   └── kamarstandard.jpg
-└── build.gradle
+├── build/
+├── data/
+│   ├── kamar.json
+│   ├── reservasi.json
+│   └── users.json
+├── resources/
+│   └── image/
+│       ├── kamardeluxe.jpg
+│       └── kamarstandard.jpg
+└── src/
+    └── main/
+        └── java/
+            └── projek/
+                ├── data/
+                │   └── DataStore.java
+                ├── model/
+                │   ├── Admin.java
+                │   ├── Guest.java
+                │   ├── Kamar.java
+                │   ├── KamarDeluxe.java
+                │   ├── KamarStandard.java
+                │   ├── Reservasi.java
+                │   └── User.java
+                └── scenes/
+                    ├── AdminSceneBuilder.java
+                    ├── GuestSceneBuilder.java
+                    ├── LoginSceneBuilder.java
+                    └── App.java
 
 projek/data/
 Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
