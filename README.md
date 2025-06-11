@@ -1,3 +1,4 @@
+```
 # 🏨**HOTEL MANAGEMENT SYSTEM**
 
 Aplikasi perhotelan ini adalah sistem manajemen hotel yang dirancang untuk memudahkan pengelolaan reservasi kamar hotel. 
@@ -66,6 +67,7 @@ projek/data/
 Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
 
 projek/model/
+
 Berisi kelas model data abstrack dan konkrit:
 - 'User.java' (abstract) dengan subclass 'Admin.java' dan 'Guest.java'
 - 'Kamar.java' (abstract) dengan subclass 'KamarStandard.java' dan KamarDeluxe.java'
@@ -87,6 +89,6 @@ Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 - Polymorphism:
    Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
 - Abstraction:
-   Kelas abstack mendefinisikan keranngka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
-
+   Kelas abstack mendefinisikan kerangka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
+```
 
