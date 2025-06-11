@@ -68,25 +68,35 @@ Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna,
 projek/model/
 
 Berisi kelas model data abstrack dan konkrit:
+
 - 'User.java' (abstract) dengan subclass 'Admin.java' dan 'Guest.java'
+
 - 'Kamar.java' (abstract) dengan subclass 'KamarStandard.java' dan KamarDeluxe.java'
+
 - 'Reservasi.java' untuk data reservasi hotel
 
 projek/scenes/
+
 - 'LoginSceneBuilder.java' untuk halaman login dan pendaftaran
+
 - 'GuestScenesBuilder.java' untuk dashboard pelanggan
+
 - 'AdminScenesBuilder.java' untuk dashboard admin
 
 projek/App.java
 Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 ## **PENERAPAN PILAR OOP**
+
 - Encapsulation:
    Data dan fungsional dikemas dalam kelas dengan variabel private atau protected, diakses lewat getter dan setter untuk menjaga keamanan dan integritas data.
+
 - Inheritance:
    Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal ini memudahkan pewarisan.
+
 - Polymorphism:
    Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
+
 - Abstraction:
    Kelas abstack mendefinisikan kerangka kerja dengan metode abstrack tanpa implementasi. ini membuat kode lebih modular dan mudah di kembangkan.
 
