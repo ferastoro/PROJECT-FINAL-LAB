@@ -4,18 +4,26 @@ Aplikasi perhotelan ini adalah sistem manajemen hotel yang dirancang untuk memud
 Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 
 1. Pengguna: Tamu dapat mendaftar, masuk, dan melakukan reservasi kamar.
+
 2. Admin: Admin dapat mengelola data pengguna, kamar, dan reservasi, serta memantau status kamar yang masih tersedia.
+
 3. Reservasi: Pengguna dapat melihat kamar yang tersedia, melakukan reservasi, danmenghitung total biaya berdasarkan jumlah hari yang diinginkan.
 
 ## **CARA MENJALANKAN APLIKASI**
 
-1. Pastikan perangkat telah terpasang Java Development Kit(JDK) 8 atau lebih baru dan JavaFX SDK.
-2. Unduh atau clone proyek ini ke komputer atau laptop.
-3. Buka proyek dengan IDE
-4. Pastikan konfigurasi proyek sudah mengacu ke JDK dan JavaFX SDK yang terpasang.
-5. Jalankan kelas utama 'App.java' sebagai aplikasi Java.
-6. Aplikasi akan menampilkan halaman login
-7. Setelah login, kita dapat mengakses dasboard sesuai peran masing-masing.
+- Pastikan perangkat telah terpasang Java Development Kit(JDK) 8 atau lebih baru dan JavaFX SDK.
+
+- Unduh atau clone proyek ini ke komputer atau laptop.
+
+- Buka proyek dengan IDE
+
+- Pastikan konfigurasi proyek sudah mengacu ke JDK dan JavaFX SDK yang terpasang.
+
+- Jalankan kelas utama 'App.java' sebagai aplikasi Java.
+
+- Aplikasi akan menampilkan halaman login
+
+- Setelah login, kita dapat mengakses dasboard sesuai peran masing-masing.
 
 
 ## **STRUKTUR FOLDER**
