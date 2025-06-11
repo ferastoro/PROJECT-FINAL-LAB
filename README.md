@@ -1,6 +1,7 @@
 # 🏨**HOTEL MANAGEMENT SYSTEM**
 
 Aplikasi perhotelan ini adalah sistem manajemen hotel yang dirancang untuk memudahkan pengelolaan reservasi kamar hotel. 
+
 Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 
 1. Pengguna: Tamu dapat mendaftar, masuk, dan melakukan reservasi kamar.
@@ -63,6 +64,7 @@ FINALAB_TEST/
 ```
 
 projek/data/
+
 Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
 
 projek/model/
@@ -84,6 +86,7 @@ projek/scenes/
 - 'AdminScenesBuilder.java' untuk dashboard admin
 
 projek/App.java
+
 Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 ## **PENERAPAN PILAR OOP**
@@ -94,11 +97,15 @@ Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 - Inheritance:
 
-  Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal ini memudahkan pewarisan.
+  Kelas dasar 'User.java' dan 'Kamar.java' menjadi superclass untuk kelas-kelas spesifik seperti 'Admin.java', 'Guset.java', 'KamarStandard.java', dan 'KamarDeluxe.java', Hal
+
+  ini memudahkan pewarisan.
 
 - Polymorphism:
 
-  Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat referensi kelas dasar.
+  Metode seperti 'getRole()' atau 'getTipe()' diimplementasikan secara berbeda di subclass, sehingga  objek dapat berperilaku sesuai tipe spesifiknya meskipun diakses lewat
+
+  referensi kelas dasar.
 
 - Abstraction:
 
