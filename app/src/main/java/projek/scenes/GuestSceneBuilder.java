@@ -484,9 +484,4 @@ public class GuestSceneBuilder {
             }
         };
     }
-<<<<<<< HEAD
-
 }
-=======
-}
->>>>>>> 334c75ca6a5906d2e834e48eda8e62464fdbe88c
