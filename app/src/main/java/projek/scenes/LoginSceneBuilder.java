@@ -83,6 +83,10 @@ public class LoginSceneBuilder {
         header.setAlignment(Pos.CENTER);
         header.setPadding(new Insets(40, 30, 30, 30));
 
+        Label space = new Label(" ");
+        HBox spaceContainer=new HBox();
+        spaceContainer.getChildren().add(space);
+
         // Title
         Label titleLabel = new Label("Welcome to the Hotel!");
         titleLabel.setStyle(
