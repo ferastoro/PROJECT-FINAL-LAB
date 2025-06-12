@@ -10,31 +10,30 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+
 import projek.App;
 import projek.data.DataStore;
 import projek.model.Guest;
 import projek.model.Kamar;
 import projek.model.Reservasi;
 
-import java.io.File;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-public class GuestSceneBuilder {
 
-    // Enhanced Color Palette
+public class GuestSceneBuilder {
     private static final String COLOR_BACKGROUND = "#F8F3D9";
-    private static final String COLOR_FORM_AREA_BG = "#EBE5C2";
     private static final String COLOR_MID_TONE_ACCENT = "#B9B28A";
     private static final String COLOR_DARK_PRIMARY = "#504B38";
     private static final String COLOR_CARD_BG = "#F5F0E8";
     private static final String COLOR_ACCENT_GOLD = "#D4AF37";
     
-    private static final String TEXT_COLOR_ON_DARK_BG = COLOR_BACKGROUND;
     private static final String TEXT_COLOR_ON_LIGHT_BG = COLOR_DARK_PRIMARY;
     private static final String SUCCESS_TEXT_COLOR = "#2E7D32";
     private static final String ERROR_TEXT_COLOR = "#C62828";
+
+    private static String fullName;
 
     public static Scene createGuestScene(Stage primaryStage, App mainApp, Guest currentGuest) {
         BorderPane rootLayout = new BorderPane();
@@ -55,11 +54,9 @@ public class GuestSceneBuilder {
         
         // Right Section - Booking Form
         VBox rightSection = createRightSection(currentGuest, leftSection);
-
         mainContent.getChildren().addAll(leftSection, rightSection);
         rootLayout.setCenter(mainContent);
 
-        // Reduced window size
         Scene scene = new Scene(rootLayout, 1000, 700);
         
         return scene;
@@ -158,17 +155,10 @@ public class GuestSceneBuilder {
         );
 
         // Room Image - Reduced size significantly
-        ImageView roomImage = new ImageView();
+            ImageView roomImage = new ImageView();
         try {
-            String fullPath = "/Users/admin/Documents/coding/FinalLab_test/app/src/main/resources" + imagePath;
-            File imageFile = new File(fullPath);
-            if (imageFile.exists()) {
-                Image image = new Image(imageFile.toURI().toString());
-                roomImage.setImage(image);
-            } else {
-                // Fallback: create a placeholder rectangle
-                roomImage.setImage(createPlaceholderImage());
-            }
+            Image image = new Image(GuestSceneBuilder.class.getResource(imagePath).toExternalForm());
+            roomImage.setImage(image);
         } catch (Exception e) {
             roomImage.setImage(createPlaceholderImage());
         }
@@ -281,29 +271,11 @@ public class GuestSceneBuilder {
         TextField lastNameField = new TextField();
         lastNameField.setPrefWidth(120);
         lastNameField.setStyle("-fx-background-color: white; -fx-background-radius: 4px;");
+        
+        fullName = firstNameField.getText().trim() + " " + lastNameField.getText().trim();
         lastNameBox.getChildren().addAll(lastNameLabel, lastNameField);
 
         guestInfoBox.getChildren().addAll(firstNameBox, lastNameBox);
-
-        // Contact Information
-        HBox contactBox = new HBox(12);
-        VBox phoneBox = new VBox(4);
-        Label phoneLabel = new Label("Phone");
-        phoneLabel.setStyle("-fx-font-size: 13px; -fx-text-fill: " + COLOR_ACCENT_GOLD + ";");
-        TextField phoneField = new TextField();
-        phoneField.setPrefWidth(120);
-        phoneField.setStyle("-fx-background-color: white; -fx-background-radius: 4px;");
-        phoneBox.getChildren().addAll(phoneLabel, phoneField);
-
-        VBox emailBox = new VBox(4);
-        Label emailLabel = new Label("Email");
-        emailLabel.setStyle("-fx-font-size: 13px; -fx-text-fill: " + COLOR_ACCENT_GOLD + ";");
-        TextField emailField = new TextField();
-        emailField.setPrefWidth(120);
-        emailField.setStyle("-fx-background-color: white; -fx-background-radius: 4px;");
-        emailBox.getChildren().addAll(emailLabel, emailField);
-
-        contactBox.getChildren().addAll(phoneBox, emailBox);
 
         // Price Calculation Section
         VBox priceSection = new VBox(8);
@@ -349,12 +321,11 @@ public class GuestSceneBuilder {
         statusLabel.setStyle("-fx-font-size: 12px;");
 
         // Add all components to the card
-        VBox formContainer = new VBox(12);
+        VBox formContainer = new VBox(20);
         formContainer.getChildren().addAll(
             new VBox(4, roomTypeLabel, roomComboBox),
             dateBox,
             guestInfoBox,
-            contactBox,
             priceSection,
             bookingButton,
             statusLabel
@@ -450,6 +421,7 @@ public class GuestSceneBuilder {
 
             // Create reservation
             Reservasi newReservation = new Reservasi(currentGuest, selectedRoom, checkIn, checkOut);
+
             newReservation.setIdReservasi("R-" + currentGuest.getUsername().substring(0, Math.min(3, currentGuest.getUsername().length())).toUpperCase() + System.currentTimeMillis() % 10000);
 
             boolean success = DataStore.getInstance().addReservation(newReservation);
@@ -509,4 +481,5 @@ public class GuestSceneBuilder {
             }
         };
     }
+
 }
