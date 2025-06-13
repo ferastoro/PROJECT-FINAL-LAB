@@ -94,7 +94,7 @@ Berisi kelas model data abstrack dan konkrit:
 
 ## 📁 projek
 
-Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
+- 'App.java' Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 
 ## **PENERAPAN PILAR OOP**
