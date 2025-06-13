@@ -27,16 +27,16 @@ cd PROJECT-FINAL-LAB
 
 4. Jalankan aplikasi menggunakan Gradle Wrapper:
 
-    Pada macOS atau Linux:
-    ```
-    ./gradlew run
-    ```
+- Pada macOS atau Linux:
+```
+./gradlew run
+```
     
-    Pada Windows (Command Prompt atau PowerShell):
+- Pada Windows (Command Prompt atau PowerShell):
     
-    ```
-    .\gradlew run
-    ```
+```
+.\gradlew run
+```
 
 
 ## **STRUKTUR FOLDER**
