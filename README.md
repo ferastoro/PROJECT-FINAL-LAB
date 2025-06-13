@@ -72,7 +72,7 @@ FINALAB_TEST/
 
 ## 📁 data
 
-Berisi 'DataStore.java' yang mengelola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
+- 📌'DataStore.java' yang mengelola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
 
 ## 📁 model
 
