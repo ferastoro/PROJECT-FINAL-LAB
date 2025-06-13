@@ -21,8 +21,7 @@ public class LoginSceneBuilder {
     private static final String COLOR_LIGHT_ACCENT = "#EBE5C2";
     private static final String COLOR_MID_TONE = "#B9B28A";
     private static final String COLOR_DARK_PRIMARY = "#504B38";
-    private static final String COLOR_CARD_BG = "#FFFFFF";
-    private static final String COLOR_SUCCESS = "#7B8A4A";
+    private static final String COLOR_SUCCESS = "#7CC269";
     private static final String COLOR_ERROR = "#B85450";
 
     public static Scene createLoginScene(Stage primaryStage, App mainApp) {
@@ -456,9 +455,6 @@ public class LoginSceneBuilder {
         String c2 = "#8B7E56";  //brown olive
         String c3 = "#EBE5C2";  // light accent
 
-        /* Sintaks gradien JavaFX:
-            linear-gradient(from <x1>% <y1>% to <x2>% <y2>%, <color> <stop>%, <color> <stop>%)
-        */
         String base = """
             -fx-background-color: linear-gradient(from 0%% 0%% to 0%% 100%%, %s 0%%, %s 100%%);
             -fx-background-radius: 25;

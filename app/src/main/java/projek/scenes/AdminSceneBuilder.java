@@ -169,9 +169,11 @@ public class AdminSceneBuilder {
         
         // Style the table to match the design
         table.setStyle(
-            "-fx-background-color: " + COLOR_INPUT_BG + ";" +
-            "-fx-background-radius: 10px;" +
-            "-fx-border-radius: 10px;"
+        "-fx-background-color: " + COLOR_INPUT_BG + ";" +
+        "-fx-background-radius: 10px;" +
+        "-fx-border-radius: 20px;" +
+        "-fx-selection-bar: " + COLOR_ACCENT + ";" +       
+        "-fx-selection-bar-text: " + COLOR_TEXT_DARK + ";" 
         );
 
         // Create columns
@@ -223,7 +225,7 @@ public class AdminSceneBuilder {
             row.setStyle("-fx-background-color: transparent;");
             return row;
         });
-
+        
         return table;
     }
 
