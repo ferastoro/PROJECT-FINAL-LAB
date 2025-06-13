@@ -30,7 +30,7 @@ public class GuestSceneBuilder {
     private static final String COLOR_ACCENT_GOLD = "#D4AF37";
     
     private static final String TEXT_COLOR_ON_LIGHT_BG = COLOR_DARK_PRIMARY;
-    private static final String SUCCESS_TEXT_COLOR = "#2E7D32";
+    private static final String SUCCESS_TEXT_COLOR = "#7CC269";
     private static final String ERROR_TEXT_COLOR = "#C62828";
 
 
