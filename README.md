@@ -15,19 +15,33 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 ## 🚀**CARA MENJALANKAN APLIKASI**
 
 
-- Pastikan perangkat telah terpasang Java Development Kit(JDK) 8 atau lebih baru dan JavaFX SDK.
+1. Pastikan perangkat telah terpasang Java Development Kit (JDK) 8 atau lebih baru dan JavaFX SDK.
 
-- Unduh atau clone proyek ini ke komputer atau laptop.
+2. Clone proyek ini ke komputer atau laptop:
+```
+git clone https://github.com/ferastoro/PROJECT-FINAL-LAB
 
-- Buka proyek dengan IDE
+cd PROJECT-FINAL-LAB
+```
+3. Buka proyek menggunakan IDE seperti IntelliJ IDEA atau VS Code.
 
-- Pastikan konfigurasi proyek sudah mengacu ke JDK dan JavaFX SDK yang terpasang.
+4. Pastikan konfigurasi proyek sudah mengarah ke:
+    - JDK versi 8 atau lebih baru
+      
+    - JavaFX SDK (pastikan sudah ditautkan ke VM Options jika menjalankan secara manual)
 
-- Jalankan kelas utama 'App.java' sebagai aplikasi Java.
+5. Jalankan aplikasi menggunakan Gradle Wrapper:
 
-- Aplikasi akan menampilkan halaman login
+Pada macOS atau Linux:
+```
+  ./gradlew run
+```
 
-- Setelah login, kita dapat mengakses dasboard sesuai peran masing-masing.
+Pada Windows (Command Prompt atau PowerShell):
+
+```
+  .\gradlew run
+```
 
 
 ## **STRUKTUR FOLDER**
