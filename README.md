@@ -68,12 +68,13 @@ FINALAB_TEST/
 └── build.gradle
 ```
 
+## 🧩Struktur Class
 
-projek/data/
+## 📁 data
 
 Berisi 'DataStore.java' yang mengelola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
 
-projek/model/
+## 📁 model
 
 Berisi kelas model data abstrack dan konkrit:
 
@@ -83,7 +84,7 @@ Berisi kelas model data abstrack dan konkrit:
 
 - 'Reservasi.java' untuk data reservasi hotel
 
-projek/scenes/
+## 📁 scenes
 
 - 'LoginSceneBuilder.java' untuk halaman login dan pendaftaran
 
@@ -91,7 +92,7 @@ projek/scenes/
 
 - 'AdminScenesBuilder.java' untuk dashboard admin
 
-projek/App.java
+## 📁 projek
 
 Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
