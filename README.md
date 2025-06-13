@@ -25,12 +25,7 @@ cd PROJECT-FINAL-LAB
 ```
 3. Buka proyek menggunakan IDE seperti IntelliJ IDEA atau VS Code.
 
-4. Pastikan konfigurasi proyek sudah mengarah ke:
-    - JDK versi 8 atau lebih baru
-      
-    - JavaFX SDK (pastikan sudah ditautkan ke VM Options jika menjalankan secara manual)
-
-5. Jalankan aplikasi menggunakan Gradle Wrapper:
+4. Jalankan aplikasi menggunakan Gradle Wrapper:
 
 Pada macOS atau Linux:
 ```
