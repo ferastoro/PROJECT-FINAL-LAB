@@ -33,7 +33,6 @@ public class GuestSceneBuilder {
     private static final String SUCCESS_TEXT_COLOR = "#2E7D32";
     private static final String ERROR_TEXT_COLOR = "#C62828";
 
-    private static String fullName;
 
     public static Scene createGuestScene(Stage primaryStage, App mainApp, Guest currentGuest) {
         BorderPane rootLayout = new BorderPane();
@@ -262,7 +261,7 @@ public class GuestSceneBuilder {
         TextField firstNameField = new TextField(currentGuest.getUsername());
         firstNameField.setPrefWidth(120);
         firstNameField.setStyle("-fx-background-color: white; -fx-background-radius: 4px;");
-        firstNameField.setEditable(false);
+        firstNameField.setEditable(true);
         firstNameBox.getChildren().addAll(firstNameLabel, firstNameField);
 
         VBox lastNameBox = new VBox(4);
@@ -271,8 +270,6 @@ public class GuestSceneBuilder {
         TextField lastNameField = new TextField();
         lastNameField.setPrefWidth(120);
         lastNameField.setStyle("-fx-background-color: white; -fx-background-radius: 4px;");
-        
-        fullName = firstNameField.getText().trim() + " " + lastNameField.getText().trim();
         lastNameBox.getChildren().addAll(lastNameLabel, lastNameField);
 
         guestInfoBox.getChildren().addAll(firstNameBox, lastNameBox);
@@ -357,7 +354,7 @@ public class GuestSceneBuilder {
 
         // Setup data and event handlers
         setupFormLogic(roomComboBox, checkInDate, checkOutDate, bookingButton, statusLabel, 
-                      currentGuest, updatePriceCalculation);
+                      currentGuest, updatePriceCalculation, firstNameField, lastNameField);
 
         return rightSection;
     }
@@ -365,7 +362,7 @@ public class GuestSceneBuilder {
     private static void setupFormLogic(ComboBox<Kamar> roomComboBox, DatePicker checkInDate, 
                                      DatePicker checkOutDate, Button bookingButton, 
                                      Label statusLabel, Guest currentGuest, 
-                                     Runnable updatePriceCalculation) {
+                                     Runnable updatePriceCalculation, TextField firstNameField, TextField lastNameField) {
         
         ObservableList<Kamar> kamarObservableList = FXCollections.observableArrayList();
         
@@ -418,6 +415,8 @@ public class GuestSceneBuilder {
                 refreshRoomList.run();
                 return;
             }
+            String combinedFullName = firstNameField.getText().trim() + " " + lastNameField.getText().trim();
+            currentGuest.setFullName(combinedFullName.trim());
 
             // Create reservation
             Reservasi newReservation = new Reservasi(currentGuest, selectedRoom, checkIn, checkOut);

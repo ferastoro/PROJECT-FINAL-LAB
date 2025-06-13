@@ -95,7 +95,7 @@ public class LoginSceneBuilder {
             "-fx-font-weight: bold;"
         );
 
-        header.getChildren().addAll(titleLabel);
+        header.getChildren().addAll(spaceContainer,titleLabel);
         return header;
     }
 
