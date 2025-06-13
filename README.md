@@ -71,7 +71,7 @@ FINALAB_TEST/
 
 projek/data/
 
-Berisi 'DataStore.java' yang mengellola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
+Berisi 'DataStore.java' yang mengelola penyimpanan dan pemuatan data (pengguna, kamar, reservasi) dalam file JSON.
 
 projek/model/
 
