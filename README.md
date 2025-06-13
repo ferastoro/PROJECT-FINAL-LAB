@@ -78,23 +78,27 @@ Berisi 'DataStore.java' yang mengelola penyimpanan dan pemuatan data (pengguna, 
 
 Berisi kelas model data abstrack dan konkrit:
 
-- 'User.java' (abstract) dengan subclass 'Admin.java' dan 'Guest.java'
+- 📌'User.java' (abstract) dengan subclass 'Admin.java' dan 'Guest.java'
 
-- 'Kamar.java' (abstract) dengan subclass 'KamarStandard.java' dan KamarDeluxe.java'
+- 📌'Kamar.java' (abstract) dengan subclass 'KamarStandard.java' dan KamarDeluxe.java'
 
-- 'Reservasi.java' untuk data reservasi hotel
+- 📌'Reservasi.java' untuk data reservasi hotel
 
 ## 📁 scenes
 
-- 'LoginSceneBuilder.java' untuk halaman login dan pendaftaran
+- 📌'LoginSceneBuilder.java' untuk halaman login dan pendaftaran
 
-- 'GuestScenesBuilder.java' untuk dashboard pelanggan
+- 📌'GuestScenesBuilder.java' untuk dashboard pelanggan
 
-- 'AdminScenesBuilder.java' untuk dashboard admin
+- 📌'AdminScenesBuilder.java' untuk dashboard admin
 
-## 📁 projek
+##  App
 
-- 'App.java' Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
+- 📌'App.java' Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
+
+## 📁 Image
+
+Menyimpan gambar pendukung antarmuka, seperti ilustrasi kamar hotel.
 
 
 ## 🎯**PENERAPAN PRINSIP OOP**
