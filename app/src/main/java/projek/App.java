@@ -47,7 +47,7 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    // Tampilkan Admin Scene
+    // Metode untuk menampilkan Admin Scene (contoh dari sebelumnya)
     public void showAdminScene(Admin admin) {
         Scene adminScene = AdminSceneBuilder.createAdminScene(primaryStage, this, admin);
         primaryStage.setTitle("Admin Dashboard - " + admin.getUsername());

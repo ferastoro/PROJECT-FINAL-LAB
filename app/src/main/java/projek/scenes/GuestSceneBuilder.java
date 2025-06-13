@@ -10,31 +10,29 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+
 import projek.App;
 import projek.data.DataStore;
 import projek.model.Guest;
 import projek.model.Kamar;
 import projek.model.Reservasi;
 
-import java.io.File;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-public class GuestSceneBuilder {
 
-    // Enhanced Color Palette
+public class GuestSceneBuilder {
     private static final String COLOR_BACKGROUND = "#F8F3D9";
-    private static final String COLOR_FORM_AREA_BG = "#EBE5C2";
     private static final String COLOR_MID_TONE_ACCENT = "#B9B28A";
     private static final String COLOR_DARK_PRIMARY = "#504B38";
     private static final String COLOR_CARD_BG = "#F5F0E8";
     private static final String COLOR_ACCENT_GOLD = "#D4AF37";
     
-    private static final String TEXT_COLOR_ON_DARK_BG = COLOR_BACKGROUND;
     private static final String TEXT_COLOR_ON_LIGHT_BG = COLOR_DARK_PRIMARY;
     private static final String SUCCESS_TEXT_COLOR = "#2E7D32";
     private static final String ERROR_TEXT_COLOR = "#C62828";
+
 
     public static Scene createGuestScene(Stage primaryStage, App mainApp, Guest currentGuest) {
         BorderPane rootLayout = new BorderPane();
@@ -55,11 +53,9 @@ public class GuestSceneBuilder {
         
         // Right Section - Booking Form
         VBox rightSection = createRightSection(currentGuest, leftSection);
-
         mainContent.getChildren().addAll(leftSection, rightSection);
         rootLayout.setCenter(mainContent);
 
-        // Reduced window size
         Scene scene = new Scene(rootLayout, 1000, 700);
         
         return scene;
@@ -484,4 +480,5 @@ public class GuestSceneBuilder {
             }
         };
     }
+
 }
