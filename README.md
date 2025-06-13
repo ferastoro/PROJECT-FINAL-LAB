@@ -12,7 +12,7 @@ Aplikasi ini memunginkan pengguna untuk melakukan hal-hal berikut:
 3. Reservasi: Pengguna dapat melihat kamar yang tersedia, melakukan reservasi, danmenghitung total biaya berdasarkan jumlah hari yang diinginkan.
 
 
-## **CARA MENJALANKAN APLIKASI**
+## 🚀**CARA MENJALANKAN APLIKASI**
 
 
 - Pastikan perangkat telah terpasang Java Development Kit(JDK) 8 atau lebih baru dan JavaFX SDK.
@@ -97,7 +97,7 @@ Berisi kelas model data abstrack dan konkrit:
 - 'App.java' Gerbang masuk utama aplikasi mengatur pergantian scene dan memulai aplikasi.
 
 
-## **PENERAPAN PILAR OOP**
+## 🎯**PENERAPAN PRINSIP OOP**
 
 
 - Encapsulation:
